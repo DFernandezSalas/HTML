@@ -9,6 +9,7 @@ function validarFormulario(){
 	var css = document.getElementById("css").checked;
 	var js = document.getElementById("js").checked;
 	var terminos = document.getElementById("terminos").value;
+	var archivo = document.getElementById("archivo").value;
 	
 	if (nombre === "") {
 		nombreError.innerHTML = "Ingrese un nombre valido.";
@@ -39,7 +40,15 @@ function validarFormulario(){
 		lenguajeError.innerHTML = "Elige una opcion.";
 	} else {
 		lenguajeError.innerHTML = "";
-	} if (!terminos.checked){
-		terminosError.innerHTML = "Debes aceptar los terminos."
+	} 
+	if (!terminos.checked){
+		terminosError.innerHTML = "Debes aceptar los terminos.";
+	} else {
+		terminosError.innerHTML = "";
+	}
+	if (archivo === ""){
+		archivoError.innerHTML = "Debes subir un archivo."
+	} else {
+		archivoError.innerHTML = "";
 	}
 }
