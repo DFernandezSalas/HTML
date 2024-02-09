@@ -35,6 +35,7 @@
 		<div>
 			<label for="fechaNacimiento">Fecha de nacimiento:</label>
 			<input type="date" id="fechaNacimiento">
+			<p id="nacimientoError" class="error-message"></p>
 		</div>
 		<div>
 			<label>¿Cual es tu lenguaje web favorito?</label><br>
@@ -42,18 +43,21 @@
 			<label for="html">HTML</label><br>
 			<input type="radio" id="css" name="fav_language" value="CSS">
 			<label for="css">CSS</label><br>
-			<input type="radio" id="javascript" name="fav_language" value="JavaScript">
-			<label for="javascript">JavaScript</label>
+			<input type="radio" id="js" name="fav_language" value="JavaScript">
+			<label for="js">JavaScript</label>
+			<p id="lenguajeError" class="error-message"></p>
 		</div>
 		<div>
 			<label for="favcolor">Selecciona un color:</label>
 			<input type="color" id="favcolor" name="favcolor">
+			<p id="colorError" class="error-message"></p>
 		</div>
 		<div class="input-group">
 			<input type="checkbox" id="terminos">
 			<label for="terminos">Acepto los terminos y condiciones.</label><br>
+			<p id="terminosError" class="error-message"></p>
 		</div>
-		<input type="image" src="./Images/boton enviar.png" alt="Submit" width="48" height="48">
+		<input type="image" src="./Images/boton enviar.png" alt="Submit" width="60" height="60">
         <button type="button" onclick="validarFormulario()">Enviar</button>
     </form>
 </div>
