@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tyle.css">
+    <title>Formulario con Validación de Email</title>
+	<script src="Scripts.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <form id="myForm">
+        <h2>Contacto</h2>
+        <div class="input-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+			<p id="nombreError" class="error-message"></p>
+        </div>
+		<div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+			<p id="passwordError" class="error-message"></p>
+        </div>
+        <div class="input-group">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <p id="emailError" class="error-message"></p>
+        </div>
+        <div class="input-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+			<p id="mensajeError" class="error-message"></p>
+        </div>
+		<div>
+			<label for="fechaNacimiento">Fecha de nacimiento:</label>
+			<input type="date" id="fechaNacimiento">
+		</div>
+		<div>
+			<label>¿Cual es tu lenguaje web favorito?</label><br>
+			<input type="radio" id="html" name="fav_language" value="HTML">
+			<label for="html">HTML</label><br>
+			<input type="radio" id="css" name="fav_language" value="CSS">
+			<label for="css">CSS</label><br>
+			<input type="radio" id="javascript" name="fav_language" value="JavaScript">
+			<label for="javascript">JavaScript</label>
+		</div>
+		<div>
+			<label for="favcolor">Selecciona un color:</label>
+			<input type="color" id="favcolor" name="favcolor">
+		</div>
+		<div class="input-group">
+			<input type="checkbox" id="terminos">
+			<label for="terminos">Acepto los terminos y condiciones.</label><br>
+		</div>
+		<input type="image" src="./Images/boton enviar.png" alt="Submit" width="48" height="48">
+        <button type="button" onclick="validarFormulario()">Enviar</button>
+    </form>
+</div>
+</body>
+</html>
