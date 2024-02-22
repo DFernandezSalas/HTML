@@ -10,6 +10,8 @@ function validarFormulario(){
 	var js = document.getElementById("js").checked;
 	var terminos = document.getElementById("terminos").value;
 	var archivo = document.getElementById("archivo").value;
+	var url = document.getElementById("url").value;
+	var tel = document.getElementById("telefono").value;
 	
 	if (nombre === "") {
 		nombreError.innerHTML = "Ingrese un nombre valido.";
@@ -47,8 +49,19 @@ function validarFormulario(){
 		terminosError.innerHTML = "";
 	}
 	if (archivo === ""){
-		archivoError.innerHTML = "Debes subir un archivo."
+		archivoError.innerHTML = "Debes subir un archivo.";
 	} else {
 		archivoError.innerHTML = "";
+	}
+
+	if (url === ""){
+		urlError.innerHTML = "Debes poner una url.";
+	} else {
+		urlError.innerHTML = "";
+	}
+	if (tel === ""){
+		telefonoError.innerHTML = "Debes poner un telefono.";
+	} else {
+		telefonoError.innerHTML = "";
 	}
 }
