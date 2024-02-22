@@ -4,11 +4,11 @@ let esEstudiante = true;
 
 var opernado1 = 5;
 var operando2 = "5";
-console.log(opernado1+operando2);
-console.log(opernado1-operando2);
-console.log(opernado1*operando2);
-console.log(opernado1/operando2);
-console.log(opernado1%operando2);
+console.log(opernado1 + operando2);
+console.log(opernado1 - operando2);
+console.log(opernado1 * operando2);
+console.log(opernado1 / operando2);
+console.log(opernado1 % operando2);
 console.log(operando2 === opernado1);
 console.log(operando2 == opernado1);
 console.log(operando2 != opernado1);
