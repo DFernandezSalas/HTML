@@ -14,4 +14,9 @@ td {
 #pantalla {
     text-align: right;
     padding-right: 10px;
+    background: rgba(0, 128, 0, 0.3)
+}
+
+.boton {
+    background-image: linear-gradient(aquamarine, purple ) ;
 }
