@@ -61,13 +61,13 @@ function cogerValor(a){
 
         num1 = Number(num1);
         num2 = Number(num2);
-        if (suma = true) {
+        if (suma == true) {
             resultado = num1 + num2;
-        } else if (resta = true) {
+        } else if (resta == true) {
             resultado = num1 - num2;
-        } else if (multi = true) {
+        } else if (multi == true) {
             resultado = num1 * num2;
-        } else if (divi = true) {
+        } else if (divi == true) {
             resultado = num1 / num2;
         }
 
@@ -91,4 +91,8 @@ function borrar() {
     num1 = "";
     condicion = false;
     simbolo = true;
+    suma = false;
+    resta = false;
+    multi = false;
+    divi = false;
 }

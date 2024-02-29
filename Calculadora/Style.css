@@ -14,9 +14,13 @@ td {
 #pantalla {
     text-align: right;
     padding-right: 10px;
-    background: rgba(0, 128, 0, 0.3)
+    background: rgb(140, 171, 192)
 }
 
 .boton {
-    background-image: linear-gradient(aquamarine, purple ) ;
+    background-image: linear-gradient(rgb(66, 165, 204), rgb(199, 203, 253) ) ;
+}
+
+body {
+    background:rgb(140, 171, 192);
 }
