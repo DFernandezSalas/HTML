@@ -9,17 +9,17 @@ var num1 = "";
 var num2 = "";
 var operador = "";
 
-function cogerValor(a){
-    
-    if (condicion == false){
+function cogerValor(a) {
+
+    if (condicion == false) {
         if (num1 == "") {
-            if (a == 1 || a == 2 || a == 3 || a == 4 || a == 5 || a == 6 || a == 7 || a == 8 || a == 9 ) {
+            if (a == 1 || a == 2 || a == 3 || a == 4 || a == 5 || a == 6 || a == 7 || a == 8 || a == 9) {
                 pantalla.innerHTML += a;
                 num1 += a;
                 simbolo = false;
             }
         } else {
-            if (a == 1 || a == 2 || a == 3 || a == 4 || a == 5 || a == 6 || a == 7 || a == 8 || a == 9 || a == 0 ) {
+            if (a == 1 || a == 2 || a == 3 || a == 4 || a == 5 || a == 6 || a == 7 || a == 8 || a == 9 || a == 0) {
                 pantalla.innerHTML += a;
                 num1 += a;
                 simbolo = false;
@@ -27,7 +27,7 @@ function cogerValor(a){
         }
     }
     if (simbolo == false) {
-        if (a == '+' || a == '-' || a == '*' || a == '/'){
+        if (a == '+' || a == '-' || a == '*' || a == '/') {
             pantalla.innerHTML += a;
             operador = a;
             simbolo = true;
@@ -43,21 +43,21 @@ function cogerValor(a){
             divi = true;
         }
     }
-    if (condicion == true && simbolo == true){
+    if (condicion == true && simbolo == true) {
         if (num2 == "") {
-            if (a == 1 || a == 2 || a == 3 || a == 4 || a == 5 || a == 6 || a == 7 || a == 8 || a == 9 ) {
+            if (a == 1 || a == 2 || a == 3 || a == 4 || a == 5 || a == 6 || a == 7 || a == 8 || a == 9) {
                 pantalla.innerHTML += a;
                 num2 += a;
             }
         } else {
-            if (a == 1 || a == 2 || a == 3 || a == 4 || a == 5 || a == 6 || a == 7 || a == 8 || a == 9 || a == 0 ) {
+            if (a == 1 || a == 2 || a == 3 || a == 4 || a == 5 || a == 6 || a == 7 || a == 8 || a == 9 || a == 0) {
                 pantalla.innerHTML += a;
                 num2 += a;
             }
         }
     }
 
-    if (a == '=' && num1 != "" && num2 != "" && simbolo != ""){
+    if (a == '=' && (num1 != "" || num1 == 0) && num2 != "" && simbolo != "") {
 
         num1 = Number(num1);
         num2 = Number(num2);
@@ -81,7 +81,7 @@ function cogerValor(a){
         divi = false;
     }
 
-    
+
 }
 
 
