@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library [
+   <!ELEMENT library (book*, author*)>
+   <!ELEMENT book (title, author, genre, price, publication_date)>
+   <!ATTLIST book id CDATA >
+   <!ELEMENT author (name, birth_date, nationality)>
+   <!ATTLIST author id CDATA >
+   <!ELEMENT title (#PCDATA)>
+   <!ATTLIST title lang (#PCDATA) >
+   <!ELEMENT genre (#PCDATA)>
+   <!ELEMENT price (#PCDATA)>
+   <!ELEMENT publication_date (#PCDATA)>
+   <!ELEMENT name (#PCDATA)>
+   <!ELEMENT birth_date (#PCDATA)>
+   <!ELEMENT nationality (#PCDATA)>
+]>
+
+
+<library>
+  <book id="1">
+    <title lang="en">The Great Gatsby</title>
+    <author>F. Scott Fitzgerald</author>
+    <genre>drama</genre>
+    <price>19.99</price>
+    <publication_date>1925-04-10</publication_date>
+  </book>
+  <book id="2">
+    <title lang="en">To Kill a Mockingbird</title>
+    <author>Harper Lee</author>
+    <genre>fiction</genre>
+    <price>24.99</price>
+    <publication_date>1960-07-11</publication_date>
+  </book>
+  <!-- More book entries go here -->
+  
+  <author id="101">
+    <name>F. Scott Fitzgerald</name>
+    <birth_date>1896-09-24</birth_date>
+    <nationality>American</nationality>
+  </author>
+  <author id="102">
+    <name>Harper Lee</name>
+    <birth_date>1926-04-28</birth_date>
+    <nationality>American</nationality>
+  </author>
+  <!-- More author entries go here -->
+
+  <!-- Additional elements like genres, readers, etc. -->
+
+</library>
