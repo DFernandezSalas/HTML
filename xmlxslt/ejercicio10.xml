@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productos>
+  <producto>
+    <nombre>Camisa</nombre>
+    <precio>25</precio>
+  </producto>
+  <producto>
+    <nombre>Pantalón</nombre>
+    <precio>40</precio>
+  </producto>
+  <producto>
+    <nombre>Zapatos</nombre>
+    <precio>60</precio>
+  </producto>
+</productos>

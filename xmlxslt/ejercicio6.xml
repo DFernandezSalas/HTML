@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <libro>
+        <titulo>El señor de los anillos</titulo>
+        <autor>J.R.R. Tolkien</autor>
+        <anno>1954</anno>
+    </libro>
+    <libro>
+        <titulo>Harry Potter y la piedra filosofal</titulo>
+        <autor>J.K. Rowling</autor>
+        <anno>1997</anno>
+    </libro>
+</biblioteca>

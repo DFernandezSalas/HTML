@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<estudiantes>
+    <estudiante>
+        <nombre>Marta Sánchez</nombre>
+        <edad>20</edad>
+        <materias>
+            <materia>
+                <nombre>Matemáticas</nombre>
+                <calificacion>85</calificacion>
+            </materia>
+            <materia>
+                <nombre>Historia</nombre>
+                <calificacion>92</calificacion>
+            </materia>
+        </materias>
+    </estudiante>
+    <estudiante>
+        <nombre>Pablo Rodríguez</nombre>
+        <edad>22</edad>
+        <materias>
+            <materia>
+                <nombre>Química</nombre>
+                <calificacion>78</calificacion>
+            </materia>
+            <materia>
+                <nombre>Literatura</nombre>
+                <calificacion>95</calificacion>
+            </materia>
+        </materias>
+    </estudiante>
+    <!-- Agrega más estudiantes según sea necesario -->
+</estudiantes>

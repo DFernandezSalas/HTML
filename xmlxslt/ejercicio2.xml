@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<empleados>
+    <empleado>
+        <nombre>Carlos González</nombre>
+        <puesto>Desarrollador</puesto>
+        <departamento>Tecnología</departamento>
+        <salario>60000</salario>
+    </empleado>
+    <empleado>
+        <nombre>Ana Ramírez</nombre>
+        <puesto>Diseñadora UX</puesto>
+        <departamento>Diseño</departamento>
+        <salario>55000</salario>
+    </empleado>
+    <!-- Agrega más empleados según sea necesario -->
+</empleados>

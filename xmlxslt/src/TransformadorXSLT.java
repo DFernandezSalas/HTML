@@ -8,32 +8,38 @@ import java.io.File;
 
 public class TransformadorXSLT {
 
-    public static void main(String[] args) {
-        try {
-            // Rutas de los archivos XML y XSLT
-            String xmlPath = "./ejemplo.xml";
-            String xsltPath = "./transformacion.xslt";
-            String outputPath = "./resultados.html";
+	public static void main(String[] args) {
+		for (int i = 1; i <= 10; i++) {
 
-            // Crear una fábrica de transformadores Saxon
-            TransformerFactory transformerFactory = new TransformerFactoryImpl();
+			if (i == 8) {
+				continue;
+			}
+			try {
+				// Rutas de los archivos XML y XSLT
+				String xmlPath = "./ejercicio" + i + ".xml";
+				String xsltPath = "./ejercicio" + i + ".xslt";
+				String outputPath = "./resultado" + i + ".html";
 
-            // Crear un transformador a partir de la hoja de estilo XSLT
-            Transformer transformer = transformerFactory.newTransformer(new StreamSource(new File(xsltPath)));
+				// Crear una fÃ¡brica de transformadores Saxon
+				TransformerFactory transformerFactory = new TransformerFactoryImpl();
 
-            // Especificar el archivo XML de entrada
-            StreamSource inputXml = new StreamSource(new File(xmlPath));
+				// Crear un transformador a partir de la hoja de estilo XSLT
+				Transformer transformer = transformerFactory.newTransformer(new StreamSource(new File(xsltPath)));
 
-            // Especificar el archivo de salida HTML
-            StreamResult outputHtml = new StreamResult(new File(outputPath));
+				// Especificar el archivo XML de entrada
+				StreamSource inputXml = new StreamSource(new File(xmlPath));
 
-            // Realizar la transformación
-            transformer.transform(inputXml, outputHtml);
+				// Especificar el archivo de salida HTML
+				StreamResult outputHtml = new StreamResult(new File(outputPath));
 
-            System.out.println("Transformación XML con XSLT completada con éxito.");
+				// Realizar la transformaciÃ³n
+				transformer.transform(inputXml, outputHtml);
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+				System.out.println("TransformaciÃ³n XML con XSLT completada con Ã©xito.");
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
 }

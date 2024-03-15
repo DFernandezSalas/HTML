@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedidos>
+    <pedido>
+        <id>1001</id>
+        <cliente>Juan Pérez</cliente>
+        <producto>Camiseta</producto>
+        <cantidad>2</cantidad>
+        <total>30.00</total>
+    </pedido>
+    <pedido>
+        <id>1002</id>
+        <cliente>Maria Gómez</cliente>
+        <producto>Zapatos</producto>
+        <cantidad>1</cantidad>
+        <total>50.00</total>
+    </pedido>
+    <!-- Agrega más pedidos según sea necesario -->
+</pedidos>

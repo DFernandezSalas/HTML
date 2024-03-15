@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo>
+    <producto>
+        <nombre>Smartphone XYZ</nombre>
+        <categoria>Electrónicos</categoria>
+        <precio>500</precio>
+    </producto>
+    <producto>
+        <nombre>Laptop ABC</nombre>
+        <categoria>Informática</categoria>
+        <precio>1200</precio>
+    </producto>
+    <!-- Agrega más productos según sea necesario -->
+</catalogo>

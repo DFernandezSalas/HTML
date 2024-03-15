@@ -1,0 +1,44 @@
+<library>
+    <book>
+        <title>Harry Potter and the Philosopher's Stone</title>
+        <author>J.K. Rowling</author>
+        <genre>Fantasy</genre>
+        <year>1997</year>
+        <publisher>Bloomsbury</publisher>
+    </book>
+    <book>
+        <title>To Kill a Mockingbird</title>
+        <author>Harper Lee</author>
+        <genre>Novel</genre>
+        <year>1960</year>
+        <publisher>J.B. Lippincott and Co.</publisher>
+    </book>
+    <book>
+        <title>The Great Gatsby</title>
+        <author>F. Scott Fitzgerald</author>
+        <genre>Novel</genre>
+        <year>1925</year>
+        <publisher>Charles Scribner's Sons</publisher>
+    </book>
+    <book>
+        <title>The Catcher in the Rye</title>
+        <author>J.D. Salinger</author>
+        <genre>Novel</genre>
+        <year>1951</year>
+        <publisher>Little, Brown and Company</publisher>
+    </book>
+    <book>
+        <title>1984</title>
+        <author>George Orwell</author>
+        <genre>Dystopian</genre>
+        <year>1949</year>
+        <publisher>Secker and Warburg</publisher>
+    </book>
+    <book>
+        <title>The Hobbit</title>
+        <author>J.R.R. Tolkien</author>
+        <genre>Fantasy</genre>
+        <year>1937</year>
+        <publisher>Allen and Unwin</publisher>
+    </book>
+</library>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <libro>
+        <titulo>El señor de los anillos</titulo>
+        <autor>J.R.R. Tolkien</autor>
+        <anno>1954</anno>
+        <genero>Fantasía</genero>
+    </libro>
+    <libro>
+        <titulo>Harry Potter y la piedra filosofal</titulo>
+        <autor>J.K. Rowling</autor>
+        <anno>1997</anno>
+        <genero>Fantasía</genero>
+    </libro>
+    <libro>
+        <titulo>Cien años de soledad</titulo>
+        <autor>Gabriel García Márquez</autor>
+        <anno>1967</anno>
+        <genero>Realismo mágico</genero>
+    </libro>
+</biblioteca>
