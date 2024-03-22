@@ -12,9 +12,9 @@ public class Transformation {
 
 		try {
 			// Rutas de los archivos XML y XSLT
-			String xmlPath = "./ejercicio3_xslt.xml";
-			String xsltPath = "./ejercicio3Choose_xslt.xslt";
-			String outputPath = "./resultadoChoose.html";
+			String xmlPath = "./ejercicio4_xslt.xml";
+			String xsltPath = "./ejercicio4_xslt.xslt";
+			String outputPath = "./resultado4.html";
 
 			// Crear una fábrica de transformadores Saxon
 			TransformerFactory transformerFactory = new TransformerFactoryImpl();
