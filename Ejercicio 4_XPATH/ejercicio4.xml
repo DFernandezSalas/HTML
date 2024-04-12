@@ -1,0 +1,51 @@
+<conference>
+  <info>
+    <name>International Tech Conference</name>
+    <location>San Francisco, CA</location>
+    <date>2024-05-15</date>
+  </info>
+
+  <speakers>
+    <speaker id="101">
+      <name>John Smith</name>
+      <bio>
+        John Smith is a software engineer with expertise in machine learning and data science.
+      </bio>
+    </speaker>
+    <speaker id="102">
+      <name>Alice Johnson</name>
+      <bio>
+        Alice Johnson is a cybersecurity expert with a passion for ethical hacking.
+      </bio>
+    </speaker>
+  </speakers>
+
+  <sessions>
+    <session id="201" speaker_id="101">
+      <title>Introduction to Machine Learning</title>
+      <time>10:00 AM - 11:30 AM</time>
+      <room>Auditorium A</room>
+    </session>
+    <session id="202" speaker_id="102">
+      <title>Ethical Hacking Workshop</title>
+      <time>1:00 PM - 3:00 PM</time>
+      <room>Conference Room B</room>
+    </session>
+  </sessions>
+
+  <attendees>
+    <attendee id="1001">
+      <name>Michael Brown</name>
+      <affiliation>XYZ Corporation</affiliation>
+    </attendee>
+    <attendee id="1002">
+      <name>Lisa Davis</name>
+      <affiliation>ABC Industries</affiliation>
+    </attendee>
+  </attendees>
+
+  <registrations>
+    <registration session_id="201" attendee_id="1001"/>
+    <registration session_id="202" attendee_id="1002"/>
+  </registrations>
+</conference>

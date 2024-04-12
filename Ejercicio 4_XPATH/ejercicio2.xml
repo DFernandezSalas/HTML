@@ -1,0 +1,57 @@
+<library>
+  <book id="1">
+    <title lang="en">The Great Gatsby</title>
+    <author>F. Scott Fitzgerald</author>
+    <genre>drama</genre>
+    <price>19.99</price>
+    <publication_date>1925-04-10</publication_date>
+    <description>
+      The Great Gatsby is a novel written by F. Scott Fitzgerald, set in the summer of 1922.
+      It explores themes of decadence, idealism, and the American Dream.
+    </description>
+    <availability>
+      <status>in_stock</status>
+      <quantity>50</quantity>
+    </availability>
+  </book>
+
+  <book id="2">
+    <title lang="en">To Kill a Mockingbird</title>
+    <author>Harper Lee</author>
+    <genre>fiction</genre>
+    <price>24.99</price>
+    <publication_date>1960-07-11</publication_date>
+    <description>
+      To Kill a Mockingbird is a novel by Harper Lee, set in the American South during the 1930s.
+      It addresses issues of racism and injustice.
+    </description>
+    <availability>
+      <status>in_stock</status>
+      <quantity>30</quantity>
+    </availability>
+  </book>
+
+  <!-- Agregar más libros con información detallada -->
+
+  <author id="101">
+    <name>F. Scott Fitzgerald</name>
+    <birth_date>1896-09-24</birth_date>
+    <nationality>American</nationality>
+    <biography>
+      F. Scott Fitzgerald was an American novelist, widely regarded as one of the greatest
+      American writers of the 20th century.
+    </biography>
+  </author>
+
+  <author id="102">
+    <name>Harper Lee</name>
+    <birth_date>1926-04-28</birth_date>
+    <nationality>American</nationality>
+    <biography>
+      Harper Lee was an American novelist famous for her influential work, To Kill a Mockingbird.
+    </biography>
+  </author>
+
+  <!-- Agregar más autores con información detallada -->
+
+</library>

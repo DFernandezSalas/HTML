@@ -1,0 +1,64 @@
+<online_store>
+  <categories>
+    <category id="1" name="Electronics">
+      <product id="101">
+        <name>Laptop</name>
+        <brand>Dell</brand>
+        <price>899.99</price>
+        <stock>50</stock>
+      </product>
+      <product id="102">
+        <name>Smartphone</name>
+        <brand>iPhone</brand>
+        <price>699.99</price>
+        <stock>100</stock>
+      </product>
+    </category>
+    
+    <category id="2" name="Books">
+      <product id="201">
+        <name>The Catcher in the Rye</name>
+        <author>J.D. Salinger</author>
+        <price>14.99</price>
+        <stock>30</stock>
+      </product>
+      <product id="202">
+        <name>Programming Python</name>
+        <author>Mark Lutz</author>
+        <price>29.99</price>
+        <stock>20</stock>
+      </product>
+    </category>
+  </categories>
+
+  <customers>
+    <customer id="1001">
+      <name>Alice Johnson</name>
+      <email>alice@email.com</email>
+      <address>
+        <street>Main Street</street>
+        <city>New York</city>
+        <zip>10001</zip>
+      </address>
+    </customer>
+    <customer id="1002">
+      <name>Bob Smith</name>
+      <email>bob@email.com</email>
+      <address>
+        <street>Oak Avenue</street>
+        <city>Los Angeles</city>
+        <zip>90001</zip>
+      </address>
+    </customer>
+  </customers>
+
+  <orders>
+    <order id="5001" customer_id="1001" date="2024-03-06">
+      <item product_id="101" quantity="2"/>
+      <item product_id="202" quantity="1"/>
+    </order>
+    <order id="5002" customer_id="1002" date="2024-03-07">
+      <item product_id="201" quantity="3"/>
+    </order>
+  </orders>
+</online_store>
