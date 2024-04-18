@@ -9,7 +9,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
-public class XPathEjercicio1 {
+public class XPathEjercicio2 {
 
 	public static void main(String[] args) throws Exception {
 		// Tu documento XML como una cadena
@@ -20,29 +20,54 @@ public class XPathEjercicio1 {
 				+ "    <genre>drama</genre>\r\n"
 				+ "    <price>19.99</price>\r\n"
 				+ "    <publication_date>1925-04-10</publication_date>\r\n"
+				+ "    <description>\r\n"
+				+ "      The Great Gatsby is a novel written by F. Scott Fitzgerald, set in the summer of 1922.\r\n"
+				+ "      It explores themes of decadence, idealism, and the American Dream.\r\n"
+				+ "    </description>\r\n"
+				+ "    <availability>\r\n"
+				+ "      <status>in_stock</status>\r\n"
+				+ "      <quantity>50</quantity>\r\n"
+				+ "    </availability>\r\n"
 				+ "  </book>\r\n"
+				+ "\r\n"
 				+ "  <book id=\"2\">\r\n"
 				+ "    <title lang=\"en\">To Kill a Mockingbird</title>\r\n"
 				+ "    <author>Harper Lee</author>\r\n"
 				+ "    <genre>fiction</genre>\r\n"
 				+ "    <price>24.99</price>\r\n"
 				+ "    <publication_date>1960-07-11</publication_date>\r\n"
+				+ "    <description>\r\n"
+				+ "      To Kill a Mockingbird is a novel by Harper Lee, set in the American South during the 1930s.\r\n"
+				+ "      It addresses issues of racism and injustice.\r\n"
+				+ "    </description>\r\n"
+				+ "    <availability>\r\n"
+				+ "      <status>in_stock</status>\r\n"
+				+ "      <quantity>30</quantity>\r\n"
+				+ "    </availability>\r\n"
 				+ "  </book>\r\n"
-				+ "  <!-- More book entries go here -->\r\n"
-				+ "  \r\n"
+				+ "\r\n"
+				+ "  <!-- Agregar más libros con información detallada -->\r\n"
+				+ "\r\n"
 				+ "  <author id=\"101\">\r\n"
 				+ "    <name>F. Scott Fitzgerald</name>\r\n"
 				+ "    <birth_date>1896-09-24</birth_date>\r\n"
 				+ "    <nationality>American</nationality>\r\n"
+				+ "    <biography>\r\n"
+				+ "      F. Scott Fitzgerald was an American novelist, widely regarded as one of the greatest\r\n"
+				+ "      American writers of the 20th century.\r\n"
+				+ "    </biography>\r\n"
 				+ "  </author>\r\n"
+				+ "\r\n"
 				+ "  <author id=\"102\">\r\n"
 				+ "    <name>Harper Lee</name>\r\n"
 				+ "    <birth_date>1926-04-28</birth_date>\r\n"
 				+ "    <nationality>American</nationality>\r\n"
+				+ "    <biography>\r\n"
+				+ "      Harper Lee was an American novelist famous for her influential work, To Kill a Mockingbird.\r\n"
+				+ "    </biography>\r\n"
 				+ "  </author>\r\n"
-				+ "  <!-- More author entries go here -->\r\n"
 				+ "\r\n"
-				+ "  <!-- Additional elements like genres, readers, etc. -->\r\n"
+				+ "  <!-- Agregar más autores con información detallada -->\r\n"
 				+ "\r\n"
 				+ "</library>";
 
@@ -61,36 +86,36 @@ public class XPathEjercicio1 {
 			System.out.println("Titulo: " + nodeList.item(i).getTextContent());
 		}
 
-		System.out.println("\nEjemplo de consulta XPath para obtener el segundo libro:");
-		String xpathExpression2 = "/library/book[2]";
+		System.out.println("\nEjemplo de consulta XPath para obtener los autores de todos los libros:");
+		String xpathExpression2 = "/library/book/author";
 		NodeList nodeList2 = (NodeList) xpath.compile(xpathExpression2).evaluate(document, XPathConstants.NODESET);
 
 		// Imprimir resultados
 		for (int i = 0; i < nodeList2.getLength(); i++) {
-			System.out.println("Libro: " + nodeList2.item(i).getTextContent());
+			System.out.println("Autor: " + nodeList2.item(i).getTextContent());
 		}
 		
-		System.out.println("\nEjemplo de consulta XPath para obtener los autores");
-		String xpathExpression3 = "/library/book/author";
+		System.out.println("\nEjemplo de consulta XPath para obtener la descripcion de todos los libros:");
+		String xpathExpression3 = "/library/book/description";
 		NodeList nodeList3 = (NodeList) xpath.compile(xpathExpression3).evaluate(document, XPathConstants.NODESET);
 
 		// Imprimir resultados
 		for (int i = 0; i < nodeList3.getLength(); i++) {
-			System.out.println("Autor: " + nodeList3.item(i).getTextContent());
+			System.out.println("Descripcion: " + nodeList3.item(i).getTextContent());
 		}
 		
-		System.out.println("\nEjemplo de consulta XPath para obtener libros escritos por F. Scott Fitzgerald:");
-		String xpathExpression4 = "/library/book[author='F. Scott Fitzgerald']/title";
+		System.out.println("\nEjemplo de consulta XPath para obtener autores nacidos antes de 1900:");
+		String xpathExpression4 = "/library/author[number(substring(birth_date, 1, 4)) < 1900]/name";
 		NodeList nodeList4 = (NodeList) xpath.compile(xpathExpression4).evaluate(document, XPathConstants.NODESET);
 
 		// Imprimir resultados
 		for (int i = 0; i < nodeList4.getLength(); i++) {
-			System.out.println("Titulo: " + nodeList4.item(i).getTextContent());
+			System.out.println("Nombre: " + nodeList4.item(i).getTextContent());
 		}
 
 		
-		System.out.println("\nEjemplo de consulta XPath para obtener libros de drama:");
-		String xpathExpression5 = "/library/book[genre='drama']/title";
+		System.out.println("\nEjemplo de consulta XPath para obtener libros con precio mayor a 20:");
+		String xpathExpression5 = "/library/book[price > 20]/title";
 		NodeList nodeList5 = (NodeList) xpath.compile(xpathExpression5).evaluate(document, XPathConstants.NODESET);
 
 		// Imprimir resultados
@@ -98,8 +123,8 @@ public class XPathEjercicio1 {
 			System.out.println("Titulo: " + nodeList5.item(i).getTextContent());
 		}
 		
-		System.out.println("\nEjemplo de consulta XPath para obtener libros publicados despues de 1950:");
-		String xpathExpression6 = "/library/book[number(substring(publication_date, 1, 4)) > 1950]/title";
+		System.out.println("\nEjemplo de consulta XPath para obtener libros disponibles en stock:");
+		String xpathExpression6 = "/library/book[availability/status='in_stock']/title";
 		NodeList nodeList6 = (NodeList) xpath.compile(xpathExpression6).evaluate(document, XPathConstants.NODESET);
 
 		// Imprimir resultados
@@ -107,40 +132,40 @@ public class XPathEjercicio1 {
 			System.out.println("Titulo: " + nodeList6.item(i).getTextContent());
 		}
 		
-		System.out.println("\nEjemplo de consulta XPath para obtener autores nacidos antes de 1900:");
-		String xpathExpression7 = "/library/author[number(substring(birth_date, 1, 4)) < 1900]/name";
+		System.out.println("\nEjemplo de consulta XPath para obtener la biografia de los autores:");
+		String xpathExpression7 = "/library/author/biography";
 		NodeList nodeList7 = (NodeList) xpath.compile(xpathExpression7).evaluate(document, XPathConstants.NODESET);
 
 		// Imprimir resultados
 		for (int i = 0; i < nodeList7.getLength(); i++) {
-			System.out.println("Nombre: " + nodeList7.item(i).getTextContent());
+			System.out.println("Biografia: " + nodeList7.item(i).getTextContent());
 		}
 		
-		System.out.println("\nEjemplo de consulta XPath para obtener autores Americanos:");
-		String xpathExpression8 = "/library/author[nationality='American']/name";
+		System.out.println("\nEjemplo de consulta XPath para obtener libros publicados despues de 1950:");
+		String xpathExpression8 = "/library/book[number(substring(publication_date, 1, 4)) > 1950]/title";
 		NodeList nodeList8 = (NodeList) xpath.compile(xpathExpression8).evaluate(document, XPathConstants.NODESET);
 
 		// Imprimir resultados
 		for (int i = 0; i < nodeList8.getLength(); i++) {
-			System.out.println("Nombre: " + nodeList8.item(i).getTextContent());
+			System.out.println("Titulo: " + nodeList8.item(i).getTextContent());
 		}
 		
-		System.out.println("\nEjemplo de consulta XPath para obtener el precio del primer libro:");
-		String xpathExpression9 = "/library/book[1]/price";
+		System.out.println("\nEjemplo de consulta XPath para obtener los autores Americanos:");
+		String xpathExpression9 = "/library/author[nationality='American']/name";
 		NodeList nodeList9 = (NodeList) xpath.compile(xpathExpression9).evaluate(document, XPathConstants.NODESET);
 
 		// Imprimir resultados
 		for (int i = 0; i < nodeList9.getLength(); i++) {
-			System.out.println("Precio: " + nodeList9.item(i).getTextContent());
+			System.out.println("Nombre: " + nodeList9.item(i).getTextContent());
 		}
 		
-		System.out.println("\nEjemplo de consulta XPath para obtener el titulo de los libros que cuestan mas de 20:");
-		String xpathExpression10 = "/library/book[price > 20]/title";
+		System.out.println("\nEjemplo de consulta XPath para obtener la cantidad disponible de cada libro en stock:");
+		String xpathExpression10 = "/library/book/availability/quantity";
 		NodeList nodeList10 = (NodeList) xpath.compile(xpathExpression10).evaluate(document, XPathConstants.NODESET);
 
 		// Imprimir resultados
 		for (int i = 0; i < nodeList10.getLength(); i++) {
-			System.out.println("Titulo: " + nodeList10.item(i).getTextContent());
+			System.out.println("Cantidad: " + nodeList10.item(i).getTextContent());
 		}
 		
 		
