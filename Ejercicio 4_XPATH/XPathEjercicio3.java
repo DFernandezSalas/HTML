@@ -104,10 +104,10 @@ public class XPathEjercicio3 {
 		// Ejemplo de consulta XPath para obtener el nombre del cliente que realizó la
 		// orden con id 5001
 		String xpathExpression6 = "/online_store/orders/order[@id='5001']/@customer_id";
-		String customerId = (String) xpath.compile(xpathExpression6).evaluate(document, XPathConstants.STRING);
+		String nodeList6 = (String) xpath.compile(xpathExpression6).evaluate(document, XPathConstants.STRING);
 
 		// Imprimir resultados
-		System.out.println("\nID del cliente que realizó la orden con ID 5001: " + customerId);
+		System.out.println("\nID del cliente que realizó la orden con ID 5001: " + nodeList6);
 
 		// Ejemplo de consulta XPath para obtener los nombres de los productos con stock
 		// menor a 50 unidades
@@ -123,28 +123,28 @@ public class XPathEjercicio3 {
 		// Ejemplo de consulta XPath para obtener la cantidad total de productos en
 		// stock
 		String xpathExpression8 = "sum(/online_store/categories/category/product/stock)";
-		Double totalStock = (Double) xpath.compile(xpathExpression8).evaluate(document, XPathConstants.NUMBER);
+		Double nodeList8 = (Double) xpath.compile(xpathExpression8).evaluate(document, XPathConstants.NUMBER);
 
 		// Imprimir resultados
-		System.out.println("\nCantidad total de productos en stock: " + totalStock.intValue());
+		System.out.println("\nCantidad total de productos en stock: " + nodeList8.intValue());
 
 		// Ejemplo de consulta XPath para obtener los nombres de los productos ordenados
 		// por nombre de la categoría
-		String xpathExpression9 = "/online_store/categories/category/product/order-by(name)";
+		String xpathExpression9 = "//category[@id='1']/product[last()]";
 		NodeList nodeList9 = (NodeList) xpath.compile(xpathExpression9).evaluate(document, XPathConstants.NODESET);
 
 		// Imprimir resultados
-		System.out.println("\nNombres de los productos ordenados por nombre de categoría:");
+		System.out.println("\nUltimo producto de la categotia con ID 1: ");
 		for (int i = 0; i < nodeList9.getLength(); i++) {
 			System.out.println("Nombre: " + nodeList9.item(i).getTextContent());
 		}
 
 		// Ejemplo de consulta XPath para obtener la fecha de la orden con el ID 5002
 		String xpathExpression10 = "/online_store/orders/order[@id='5002']/@date";
-		String orderDate = (String) xpath.compile(xpathExpression10).evaluate(document, XPathConstants.STRING);
+		String nodeList10 = (String) xpath.compile(xpathExpression10).evaluate(document, XPathConstants.STRING);
 
 		// Imprimir resultados
-		System.out.println("\nFecha de la orden con ID 5002: " + orderDate);
+		System.out.println("\nFecha de la orden con ID 5002: " + nodeList10);
 	}
 
 	private static Document parseXML(String xmlString) throws Exception {
